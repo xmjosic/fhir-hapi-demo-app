@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+logging:
+  level:
+    hr.xmjosic.fhirhapidemoapp: DEBUG
+
+hapi:
+  fhir:
+    base-server-address: https://hapi.fhir.org/baseR4
+    config:
+      invoice:
+        identifier-type: UUID
+        identifier-system: testSystem
+        profile: http://hl7.org/fhir/StructureDefinition/Invoice
+      contract:
+        identifier-type: OID
+        identifier-system: systemTest
+        profile: http://hl7.org/fhir/StructureDefinition/Contract
+
